@@ -23,7 +23,7 @@ click [demo](https://nossika.github.io/waterfall.js/demo.html) to try it online.
 
 |Parameter|Type|Default|Description|
 |:-:|:-:|:-:|---|
-|space|Array(2)|[20, 20]|margin-top/bottom, margin-left/right of boxes|
+|space|Array(2)|[20, 20]|[margin-top/bottom, margin-left/right] of boxes|
 |keep_css|Boolean|false|whether to keep container's `position` and `height`|
 
 ## Methods
@@ -35,7 +35,7 @@ click [demo](https://nossika.github.io/waterfall.js/demo.html) to try it online.
 |reset()|reset data & clear boxes|
 ## Ticks
 
-* Boxex must be direct child of container.
+* Boxes must be direct child of container.
 
 * Remember to excute `Waterfall.fall()` when adding boxes or resizing container. Use `Waterfall.fall(true)` for better performance if container's width hasn't changed.
 
