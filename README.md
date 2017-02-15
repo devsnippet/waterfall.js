@@ -33,7 +33,7 @@ click [demo](https://nossika.github.io/waterfall.js/demo.html) to try it online.
 |init(container, selector [,config])|container \<DOM element><br>selector \<String><br>config \<Object>|
 |fall(cache)|calc & set boxes' position<br>cache \<Boolean>|
 |reset()|reset data & clear boxes|
-## Ticks
+## Tips
 
 * Boxes must be direct child of container.
 
