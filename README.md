@@ -1,6 +1,6 @@
 # waterfall.js
 
-Make equal-width boxes fall like waterfall. 
+Auto set boxes's position to make a waterfall layout. 
 
 ## Examples
 
@@ -17,27 +17,45 @@ Make equal-width boxes fall like waterfall.
 		})
 	</script>
 
-click [demo](https://nossika.github.io/waterfall.js/demo.html) to try it online.
+Click [DEMO](https://nossika.github.io/waterfall.js/demo.html) to try it!
 
-## Options
+## Init options
 
-|Parameter|Type|Default|Description|
-|:-:|:-:|:-:|---|
-|space|Array(2)|[20, 20]|[margin-top/bottom, margin-left/right] of boxes|
-|keep_css|Boolean|false|whether to keep container's `position` and `height`|
+	Waterfall.init(container, selector, options);
+
+* **container** (required, type: HTMLElement)
+
+* **selector** (required, type: String): selector of boxes in container
+
+* **options** (type: Object)
+
+	* **space** (type: Array, default: `[20, 20]`): margin-top/bottom and margin-left/right of boxes
+
+	* **keep_css** (type: Boolean, default: false): whether to keep container's `position` and `height`
+
 
 ## Methods
 
-|Method|Description|
-|:-:|---|
-|init(container, selector [,config])|container \<DOM element><br>selector \<String><br>config \<Object>|
-|fall(cache)|calc & set boxes' position<br>cache \<Boolean>|
-|reset()|reset data & clear boxes|
+* **init(container, selector, options)**
+
+	Check out **Init options** for detail.
+
+* **fall(cache)**
+ 
+	Calc and reset boxes' position.
+
+	* **cache** (type: Boolean, default: false): whether to use cache
+
+* **reset()**
+
+	Reset data and clear boxes.
+	
+
 ## Tips
 
 * Boxes must be direct child of container.
 
 * Remember to excute `Waterfall.fall()` when adding boxes or resizing container. Use `Waterfall.fall(true)` for better performance if container's width hasn't changed.
 
-* Add `transition` property to box's css for better visual effect.
+* Add `transition` property to boxes' css for better visual effect.
 
